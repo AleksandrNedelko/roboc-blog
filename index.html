@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Блог о C и робототехнике</title>
+    <meta
+      name="description"
+      content="Robo-C Blog — блог новичка о программировании на C и работе с микроконтроллерами. Делюсь экспериментами с Raspberry Pi Pico, первыми роботами, ошибками и открытиями для начинающих."
+    />
+    <meta
+      property="og:title"
+      content="Robo-C Blog — изучаю язык C и робототехнику с нуля"
+    />
+    <meta
+      property="og:description"
+      content="Блог новичка о программировании на языке C и робототехнике с Raspberry Pi Pico. Первые роботы, эксперименты, ошибки и открытия для начинающих."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-blog.vercel.app/" />
+    <meta
+      property="og:image"
+      content="https://your-blog.vercel.app/banner.png"
+    />
+
+    <link rel="stylesheet" href="/src/scss/main.scss" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="header__container">
+          <a href="#/" class="header__logo">
+            <svg
+              class="header__logo-icon"
+              viewBox="0 0 400 400"
+              role="img"
+              aria-label="RoboC"
+            >
+              <title>RoboC</title>
+              <!-- Голова робота -->
+              <rect
+                x="120"
+                y="80"
+                width="160"
+                height="140"
+                rx="10"
+                fill="#ffffff"
+                stroke="#000000"
+                stroke-width="3"
+              />
+              <!-- Глаза -->
+              <circle cx="160" cy="140" r="15" fill="#000000" />
+              <circle cx="240" cy="140" r="15" fill="#000000" />
+              <!-- Рот -->
+              <rect
+                x="180"
+                y="170"
+                width="40"
+                height="5"
+                rx="2"
+                fill="#000000"
+              />
+              <!-- Антенна -->
+              <line
+                x1="200"
+                y1="80"
+                x2="200"
+                y2="50"
+                stroke="#ffffff"
+                stroke-width="4"
+              />
+              <circle cx="200" cy="45" r="8" fill="#ffffff" />
+              <!-- Тело -->
+              <rect
+                x="100"
+                y="220"
+                width="200"
+                height="120"
+                rx="10"
+                fill="#ffffff"
+                stroke="#000000"
+                stroke-width="3"
+              />
+              <!-- Кнопки на груди -->
+              <circle cx="180" cy="270" r="8" fill="#000000" />
+              <circle cx="200" cy="270" r="8" fill="#000000" />
+              <circle cx="220" cy="270" r="8" fill="#000000" />
+              <!-- Руки -->
+              <rect
+                x="60"
+                y="230"
+                width="50"
+                height="20"
+                rx="5"
+                fill="#ffffff"
+                stroke="#000000"
+                stroke-width="3"
+              />
+              <rect
+                x="290"
+                y="230"
+                width="50"
+                height="20"
+                rx="5"
+                fill="#ffffff"
+                stroke="#000000"
+                stroke-width="3"
+              />
+              <!-- Ноги -->
+              <rect
+                x="120"
+                y="340"
+                width="40"
+                height="50"
+                rx="5"
+                fill="#ffffff"
+                stroke="#000000"
+                stroke-width="3"
+              />
+              <rect
+                x="240"
+                y="340"
+                width="40"
+                height="50"
+                rx="5"
+                fill="#ffffff"
+                stroke="#000000"
+                stroke-width="3"
+              />
+            </svg>
+            <span class="header__logo-text">RoboC</span>
+          </a>
+
+          <nav class="header__nav header__nav--desktop">
+            <a href="#/" class="header__nav-link" data-i18n="nav.home"
+              >Главная</a
+            >
+            <a href="#/blog" class="header__nav-link" data-i18n="nav.blog"
+              >Блог</a
+            >
+            <a href="#/about" class="header__nav-link" data-i18n="nav.about"
+              >О блоге</a
+            >
+          </nav>
+
+          <button class="header__menu-toggle" aria-label="Меню">
+            <svg
+              class="header__menu-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+          </button>
+
+          <button
+            class="header__theme-toggle header__theme-toggle--desktop"
+            aria-label="Переключить тему"
+          >
+            <svg
+              class="header__theme-icon header__theme-icon--sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <path
+                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
+              />
+            </svg>
+            <svg
+              class="header__theme-icon header__theme-icon--moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="drawer">
+        <div class="drawer__overlay"></div>
+        <div class="drawer__content">
+          <nav class="drawer__nav">
+            <a href="#/" class="drawer__nav-link" data-i18n="nav.home"
+              >Главная</a
+            >
+            <a href="#/blog" class="drawer__nav-link" data-i18n="nav.blog"
+              >Блог</a
+            >
+            <a href="#/about" class="drawer__nav-link" data-i18n="nav.about"
+              >О блоге</a
+            >
+            <div class="drawer__divider"></div>
+            <button class="drawer__theme-toggle" data-i18n="nav.theme_dark">
+              🌙 Темная
+            </button>
+          </nav>
+        </div>
+      </div>
+
+      <main class="page" id="page-content"></main>
+
+      <footer class="footer">
+        <div class="footer__container">
+          <p class="footer__text" data-i18n="footer.text">
+            © 2026 Блог о программировании на языке C и робототехнике
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

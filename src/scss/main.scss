@@ -1,0 +1,69 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'blocks/header';
+@use 'blocks/footer';
+@use 'blocks/page';
+@use 'blocks/card';
+@use 'blocks/button';
+@use 'blocks/chip';
+@use 'blocks/drawer';
+@use 'blocks/banner';
+@use 'blocks/markdown';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: $font-family;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: $color-light-bg;
+  color: $color-light-text;
+  transition: background-color $transition-normal, color $transition-normal;
+
+  @include dark-theme {
+    background-color: $color-dark-bg;
+    color: $color-dark-text;
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+:root {
+  --color-bg: #{$color-light-bg};
+  --color-surface: #{$color-light-surface};
+  --color-text: #{$color-light-text};
+  --color-text-secondary: #{$color-light-text-secondary};
+  --color-border: #{$color-light-border};
+  --color-divider: #{$color-light-divider};
+}
+
+.theme-dark {
+  --color-bg: #{$color-dark-bg};
+  --color-surface: #{$color-dark-surface};
+  --color-text: #{$color-dark-text};
+  --color-text-secondary: #{$color-dark-text-secondary};
+  --color-border: #{$color-dark-border};
+  --color-divider: #{$color-dark-divider};
+}

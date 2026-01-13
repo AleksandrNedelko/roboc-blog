@@ -1,0 +1,30 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.footer {
+  margin-top: auto;
+  width: 100%;
+  padding: $spacing-xl $spacing-md;
+  background-color: $color-black;
+  color: $color-white;
+  text-align: center;
+  border-top: 1px solid $color-dark-border;
+
+  @include dark-theme {
+    border-top-color: $color-dark-border;
+  }
+
+  @include light-theme {
+    border-top-color: #333333;
+  }
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__text {
+  font-size: 0.875rem;
+  margin: 0;
+}
