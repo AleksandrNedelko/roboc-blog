@@ -39,4 +39,4 @@
 - предлагать идеи
 - указывать на ошибки
 
-🌐 Сайт: https://roboc.vercel.app
+🌐 Сайт: https://roboc-blog-aleksandr-nedelko-s-projects.vercel.app/#/
