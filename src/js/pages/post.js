@@ -36,7 +36,6 @@ export async function renderPost(container, postId) {
       <header class="page__post-header">
         <h1 class="page__post-title">${title}</h1>
         <div class="page__post-meta">
-          <span class="chip">${translateCategory(post.category)}</span>
           <time class="page__post-date">${formatDate(post.date, lang)}</time>
         </div>
         ${

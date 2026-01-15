@@ -43,7 +43,6 @@ export async function renderBlog(container) {
               <div class="card__content">
                 <div class="card__header">
                   <h2 class="card__title">${title}</h2>
-                  <span class="chip">${translateCategory(post.category)}</span>
                 </div>
                 <p class="card__preview">${preview}</p>
                 <div class="card__footer">
